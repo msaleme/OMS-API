@@ -2,7 +2,7 @@ An OMS in the energy and utilities sector stands for Outage Management System. I
 
 Here are some key points about OMS:
 
-Coordinates with multiple data sources: An OMS works with data from systems like Geographical Information System (GIS), Customer Information System (CIS), Automated Metering Infrastructure (AMI), Mobile Workforce Management Systems (MWM), and Supervisory Control and Data Acquisition Systems (SCADA)1.
-Improves response times: With the help of OMS, utilities can restore power faster than traditional methods, maintaining a more consistent flow of electricity1.
-Enhances customer service: By detecting outages quickly, often before customers report them, an OMS can significantly improve customer satisfaction1.
-Overall, an OMS plays a vital role in the reliability and efficiency of today’s energy utility operations.
+-Coordinates with multiple data sources: An OMS works with data from systems like Geographical Information System (GIS), Customer Information System (CIS), Automated Metering Infrastructure (AMI), Mobile Workforce Management Systems (MWM), and Supervisory Control and Data Acquisition Systems (SCADA).
+-Improves response times: With the help of OMS, utilities can restore power faster than traditional methods, maintaining a more consistent flow of electricity.
+-Enhances customer service: By detecting outages quickly, often before customers report them, an OMS can significantly improve customer satisfaction.
+-Overall, an OMS plays a vital role in the reliability and efficiency of today’s energy utility operations.
