@@ -1,0 +1,94 @@
+#%RAML 1.0
+title: Outage Management System API
+version: v1
+mediaType: application/json
+protocols: [ HTTP, HTTPS ]
+
+types:
+    Outage:
+        type: object
+        properties:
+            id:
+                type: string
+                required: true
+            startTime:
+                type: datetime
+                required: true
+            endTime:
+                type: datetime
+            status:
+                type: string
+                enum: [ reported, ongoing, resolved ]
+                required: true
+            areaAffected:
+                type: string
+                required: true
+            cause:
+                type: string
+
+/outages:
+    get:
+        description: Get a list of all reported outages
+        responses:
+            200:
+                body:
+                    application/json:
+                        example: |
+                            [
+                              {
+                                "id": "OUT123",
+                                "startTime": "2024-05-10T08:00:00Z",
+                                "endTime": "2024-05-10T12:00:00Z",
+                                "status": "resolved",
+                                "areaAffected": "Downtown",
+                                "cause": "Equipment failure"
+                              },
+                              {
+                                "id": "OUT124",
+                                "startTime": "2024-05-10T09:30:00Z",
+                                "status": "ongoing",
+                                "areaAffected": "Suburbs",
+                                "cause": "Unknown"
+                              }
+                            ]
+    post:
+        description: Report a new outage
+        body:
+            application/json:
+                type: Outage
+                example: |
+                    {
+                      "startTime": "2024-05-10T11:00:00Z",
+                      "status": "reported",
+                      "areaAffected": "Northside",
+                      "cause": "Vehicle collision"
+                    }
+        responses:
+            201:
+                body:
+                    application/json:
+                        example: |
+                            {
+                              "id": "OUT125",
+                              "startTime": "2024-05-10T11:00:00Z",
+                              "status": "reported",
+                              "areaAffected": "Northside",
+                              "cause": "Vehicle collision"
+                            }
+
+/outages/{outageId}:
+    get:
+        description: Get details about a specific outage
+        responses:
+            200:
+                body:
+                    application/json:
+                        example: |
+                            {
+                              "id": "OUT123",
+                              "startTime": "2024-05-10T08:00:00Z",
+                              "endTime": "2024-05-10T12:00:00Z",
+                              "status": "resolved",
+                              "areaAffected": "Downtown",
+                              "cause": "Equipment failure"
+                            }

@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "apiVersion": "v1",
+  "descriptorVersion": "1.0.0",
+  "classifier": "raml",
+  "main": "oms-api.raml",
+  "assetId": "oms-api",
+  "groupId": "null",
+  "organizationId": "null",
+  "name": "OMS API"
+}
